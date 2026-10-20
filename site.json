@@ -1,0 +1,177 @@
+{
+ "nome": "Clínica Gratitud",
+ "pagina_equipe": "equipe",
+ "agendar_url": "https://wa.me/5519996384455?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio.",
+ "agendar_texto": "Agendar",
+ "cores_menu": {
+  "fundo": "#301750",
+  "texto": "#C8E5F1",
+  "destaque": "#59CAE8",
+  "separador": "#5A4A80"
+ },
+ "fontes_link": "<link href=\"https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Cinzel:wght@700&family=Cormorant+Garamond:wght@600&family=Fraunces:opsz,wght@9..144,500&family=Fredoka:wght@600&family=Shippori+Mincho:wght@700&display=swap\" rel=\"stylesheet\">",
+ "equipe_antes_de": "<section id=\"atendimento\"",
+ "secao_equipe": {
+  "titulo": "Conheça quem cuida de você.",
+  "texto": "Cada profissional tem o seu jeito de cuidar. Escolha alguém para conhecer.",
+  "fundo": "#FFFFFF",
+  "fonte_titulo": "'Young Serif',Georgia,serif",
+  "cor_titulo": "#301750"
+ },
+ "equipe": [
+  {
+   "slug": "fernando",
+   "nome": "Fernando",
+   "area": "Psicólogo, psicanálise",
+   "tema": {
+    "fundo": "#301750",
+    "texto": "#FFFFFF",
+    "destaque": "#FF4FB4",
+    "fonte": "'Anton',Impact,sans-serif;text-transform:uppercase",
+    "moldura": "border:8px solid #FFFFFF;border-radius:16px;transform:rotate(-2deg);box-shadow:10px 10px 0 #59CAE8",
+    "enfeite": "<svg aria-hidden=\"true\" width=\"40\" height=\"40\" viewBox=\"0 0 24 24\" fill=\"#FFE45C\" style=\"position:absolute;top:-12px;right:-8px\"><path d=\"M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z\"/></svg>"
+   },
+   "foto": "fotos/fernando2.jpg"
+  },
+  {
+   "slug": "fernanda",
+   "nome": "Fernanda",
+   "area": "Psicóloga e psicopedagoga",
+   "tema": {
+    "fundo": "#EBDFFF",
+    "texto": "#2A0F4F",
+    "destaque": "#5A22C8",
+    "fonte": "'Young Serif',Georgia,serif",
+    "moldura": "border-radius:50% 50% 18px 18px",
+    "enfeite": ""
+   },
+   "foto": "fotos/fernanda.jpg"
+  },
+  {
+   "slug": "odail",
+   "nome": "Odail",
+   "area": "Psicólogo, abordagem centrada na pessoa",
+   "tema": {
+    "fundo": "#F3EADB",
+    "texto": "#2B211B",
+    "destaque": "#2F4A3A",
+    "fonte": "'Cormorant Garamond',Georgia,serif;font-weight:600",
+    "moldura": "border-radius:50%;border:5px solid #F3EADB;outline:2px solid #B08D57;outline-offset:5px",
+    "enfeite": ""
+   },
+   "foto": "fotos/odail.jpg"
+  },
+  {
+   "slug": "mauricio",
+   "nome": "Maurício",
+   "area": "Psicólogo, TCC",
+   "tema": {
+    "fundo": "#F4EEE3",
+    "texto": "#151515",
+    "destaque": "#C8202F",
+    "fonte": "'Bebas Neue',Impact,sans-serif",
+    "moldura": "border:4px solid #151515;border-radius:22px;box-shadow:10px 10px 0 #C8202F",
+    "enfeite": "<svg aria-hidden=\"true\" width=\"48\" height=\"48\" viewBox=\"0 0 64 64\" style=\"position:absolute;bottom:-16px;left:-16px\"><path d=\"M32 6l7 16 17 2-13 11 4 17-15-9-15 9 4-17L8 24l17-2z\" fill=\"#F4EEE3\" stroke=\"#151515\" stroke-width=\"3.5\" stroke-linejoin=\"round\"/></svg>"
+   },
+   "foto": "fotos/mauricio.jpg"
+  },
+  {
+   "slug": "sthefany",
+   "nome": "Sthefany",
+   "area": "Psicóloga, TCC",
+   "tema": {
+    "fundo": "#F3EEFF",
+    "texto": "#2A0F4F",
+    "destaque": "#5A22C8",
+    "fonte": "'Young Serif',Georgia,serif",
+    "moldura": "border-radius:999px 999px 0 0",
+    "enfeite": ""
+   },
+   "foto": "fotos/sthefany.jpg"
+  },
+  {
+   "slug": "tatiane",
+   "nome": "Tatiane",
+   "area": "Psicóloga, TCC",
+   "tema": {
+    "fundo": "#FBF4EE",
+    "texto": "#2B1F3A",
+    "destaque": "#8E4FD8",
+    "fonte": "'Fraunces',Georgia,serif",
+    "moldura": "border-radius:999px 999px 24px 24px;background:#EBDDFB",
+    "enfeite": "<svg aria-hidden=\"true\" width=\"64\" height=\"54\" viewBox=\"0 0 120 100\" style=\"position:absolute;top:-14px;right:-10px\"><path d=\"M60 50C46 18 14 8 8 22c-6 14 12 30 40 30C20 56 12 78 26 86c14 8 28-12 34-30 6 18 20 38 34 30 14-8 6-30-22-34 28 0 46-16 40-30-6-14-38-4-52 28z\" fill=\"#FF8A75\"/><path d=\"M60 30v44\" stroke=\"#2B1F3A\" stroke-width=\"4\" stroke-linecap=\"round\"/></svg>"
+   }
+  },
+  {
+   "slug": "ana-elisa",
+   "nome": "Ana Elisa",
+   "area": "Psicanalista",
+   "tema": {
+    "fundo": "#F7F3EA",
+    "texto": "#1E1E1E",
+    "destaque": "#B3262E",
+    "fonte": "'Shippori Mincho',Georgia,serif",
+    "moldura": "border-radius:50%;background:#EDE6D8",
+    "enfeite": "<svg aria-hidden=\"true\" viewBox=\"0 0 400 400\" style=\"position:absolute;inset:-8%;width:116%;height:116%\"><circle cx=\"200\" cy=\"200\" r=\"180\" fill=\"none\" stroke=\"#1E1E1E\" stroke-width=\"16\" stroke-linecap=\"round\" stroke-dasharray=\"1050 1200\" transform=\"rotate(-70 200 200)\"/></svg><span aria-hidden=\"true\" style=\"position:absolute;right:-6px;bottom:-6px;width:44px;height:44px;border:3px solid #B3262E;border-radius:6px;color:#B3262E;display:flex;align-items:center;justify-content:center;font:700 26px 'Shippori Mincho',serif;transform:rotate(-6deg);background:#F7F3EA\">聴</span>",
+    "proporcao": "1"
+   }
+  },
+  {
+   "slug": "raissa",
+   "nome": "Raíssa",
+   "area": "Fonoaudióloga",
+   "tema": {
+    "fundo": "#14102E",
+    "texto": "#F4ECD8",
+    "destaque": "#E8C15A",
+    "fonte": "'Cinzel',Georgia,serif;font-weight:700",
+    "moldura": "border:3px solid #E8C15A;border-radius:999px 999px 14px 14px",
+    "enfeite": "<svg aria-hidden=\"true\" width=\"64\" height=\"52\" viewBox=\"0 0 120 96\" style=\"position:absolute;top:-40px;left:50%;margin-left:-32px\"><path d=\"M88 86c18-4 26-20 18-34\" fill=\"none\" stroke=\"#0B0820\" stroke-width=\"7\" stroke-linecap=\"round\"/><path d=\"M30 92c-4-26 6-48 20-56l-6-22 14 12c4-1 8-1 12 0l14-12-6 22c14 8 24 30 20 56z\" fill=\"#0B0820\"/><circle cx=\"52\" cy=\"40\" r=\"3.4\" fill=\"#E8C15A\"/><circle cx=\"68\" cy=\"40\" r=\"3.4\" fill=\"#E8C15A\"/></svg>"
+   },
+   "foto": "fotos/raissa.jpg"
+  },
+  {
+   "slug": "fabiane",
+   "nome": "Fabiane",
+   "area": "Nutricionista",
+   "tema": {
+    "fundo": "#FFF4EA",
+    "texto": "#3A2418",
+    "destaque": "#B23A22",
+    "fonte": "'Fredoka',system-ui,sans-serif;font-weight:600",
+    "moldura": "border-radius:36px;border:6px solid #FFFFFF;box-shadow:0 0 0 3px #F6B8A2",
+    "enfeite": "<svg aria-hidden=\"true\" width=\"48\" height=\"48\" viewBox=\"0 0 64 64\" style=\"position:absolute;bottom:-10px;left:-14px\"><path d=\"M10 54C10 26 30 8 56 8c0 26-18 46-46 46z\" fill=\"#7CC08F\"/><path d=\"M12 52L46 18\" stroke=\"#1F5C38\" stroke-width=\"3\" stroke-linecap=\"round\"/></svg>"
+   },
+   "foto": "fotos/fabiane2.jpg"
+  }
+ ],
+ "marca": {
+  "nome": "Clínica Gratitud",
+  "nome_curto": "Gratitud",
+  "simbolo": "<svg viewBox=\"0 0 64 56\" aria-hidden=\"true\" width=\"26\" height=\"23\" fill=\"none\" stroke=\"#59CAE8\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"19\" cy=\"9\" r=\"7\" fill=\"#59CAE8\" stroke=\"none\"/><circle cx=\"45\" cy=\"9\" r=\"5.5\" stroke-width=\"3.5\"/><path d=\"M32 52C14 40 6 31 8 23c2-7 10-9 16-5 4 3 6 7 8 10 2-3 4-7 8-10 6-4 14-2 16 5 2 8-6 17-24 29z\"/></svg>",
+  "cor_principal": "#4C13A2",
+  "cor_noite": "#301750",
+  "cor_acento": "#59CAE8",
+  "cor_clara": "#C8E5F1"
+ },
+ "texto_card": "Ver a página",
+ "rodape": {
+  "endereco": "Av. Lauro de Carvalho, 1001, Centro, Jaguariúna/SP",
+  "horario": "Segunda a sexta, das 8h às 18h30",
+  "links": [
+   {
+    "texto": "WhatsApp (19) 99638-4455",
+    "url": "https://wa.me/5519996384455"
+   },
+   {
+    "texto": "Instagram",
+    "url": "https://www.instagram.com/clinica.gratitud/"
+   },
+   {
+    "texto": "YouTube e Podtud",
+    "url": "https://www.youtube.com/@clinicagratitud"
+   }
+  ]
+ },
+ "descricao_inicial": "Clínica Gratitud em Jaguariúna/SP: psicologia, psicopedagogia, fonoaudiologia e nutrição. Unimed, Salusmed e particular."
+}
