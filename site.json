@@ -9,7 +9,7 @@
   "destaque": "#59CAE8",
   "separador": "#5A4A80"
  },
- "fontes_link": "<link href=\"https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Cinzel:wght@700&family=Cormorant+Garamond:wght@600&family=Fraunces:opsz,wght@9..144,500&family=Fredoka:wght@600&family=Shippori+Mincho:wght@700&display=swap\" rel=\"stylesheet\">",
+ "fontes_link": "<link href=\"https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Cinzel:wght@700&family=Cormorant+Garamond:wght@600&family=Fraunces:opsz,wght@9..144,500&family=Fredoka:wght@600&family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital@1&display=swap\" rel=\"stylesheet\">",
  "equipe_antes_de": "<section id=\"atendimento\"",
  "secao_equipe": {
   "titulo": "Conheça quem cuida de você.",
@@ -94,26 +94,27 @@
    "nome": "Tatiane",
    "area": "Psicóloga, TCC",
    "tema": {
-    "fundo": "#FBF4EE",
-    "texto": "#2B1F3A",
-    "destaque": "#8E4FD8",
+    "fundo": "#24103F",
+    "texto": "#FFFFFF",
+    "destaque": "#FFD9A0",
     "fonte": "'Fraunces',Georgia,serif",
-    "moldura": "border-radius:999px 999px 24px 24px;background:#EBDDFB",
-    "enfeite": "<svg aria-hidden=\"true\" width=\"64\" height=\"54\" viewBox=\"0 0 120 100\" style=\"position:absolute;top:-14px;right:-10px\"><path d=\"M60 50C46 18 14 8 8 22c-6 14 12 30 40 30C20 56 12 78 26 86c14 8 28-12 34-30 6 18 20 38 34 30 14-8 6-30-22-34 28 0 46-16 40-30-6-14-38-4-52 28z\" fill=\"#FF8A75\"/><path d=\"M60 30v44\" stroke=\"#2B1F3A\" stroke-width=\"4\" stroke-linecap=\"round\"/></svg>"
-   }
+    "moldura": "border-radius:999px 999px 24px 24px;background:linear-gradient(#3E1A8A,#5A22C8);box-shadow:0 0 0 2px #FFD9A0 inset",
+    "enfeite": "<svg aria-hidden=\"true\" width=\"92\" height=\"46\" viewBox=\"0 0 150 70\" style=\"position:absolute;left:-22px;bottom:-10px\"><rect x=\"6\" y=\"40\" width=\"138\" height=\"14\" rx=\"2\" fill=\"#59CAE8\"/><rect x=\"14\" y=\"54\" width=\"124\" height=\"14\" rx=\"2\" fill=\"#E9A27A\"/><path d=\"M30 40c0-22 22-30 46-30 26 0 44 10 44 30z\" fill=\"#140828\"/><circle cx=\"112\" cy=\"30\" r=\"12\" fill=\"#140828\"/><path d=\"M103 22l2-12 7 9zM114 19l6-10 3 12z\" fill=\"#140828\"/></svg>"
+   },
+   "foto": "fotos/tatiane.jpg"
   },
   {
    "slug": "ana-elisa",
    "nome": "Ana Elisa",
    "area": "Psicanalista",
    "tema": {
-    "fundo": "#F7F3EA",
-    "texto": "#1E1E1E",
-    "destaque": "#B3262E",
-    "fonte": "'Shippori Mincho',Georgia,serif",
-    "moldura": "border-radius:50%;background:#EDE6D8",
-    "enfeite": "<svg aria-hidden=\"true\" viewBox=\"0 0 400 400\" style=\"position:absolute;inset:-8%;width:116%;height:116%\"><circle cx=\"200\" cy=\"200\" r=\"180\" fill=\"none\" stroke=\"#1E1E1E\" stroke-width=\"16\" stroke-linecap=\"round\" stroke-dasharray=\"1050 1200\" transform=\"rotate(-70 200 200)\"/></svg><span aria-hidden=\"true\" style=\"position:absolute;right:-6px;bottom:-6px;width:44px;height:44px;border:3px solid #B3262E;border-radius:6px;color:#B3262E;display:flex;align-items:center;justify-content:center;font:700 26px 'Shippori Mincho',serif;transform:rotate(-6deg);background:#F7F3EA\">聴</span>",
-    "proporcao": "1"
+    "fundo": "#F4EFE4",
+    "texto": "#1D2733",
+    "destaque": "#6E2433",
+    "fonte": "'Libre Caslon Display',Georgia,serif",
+    "moldura": "border-radius:50%;background:#EDE5D4;border:1.5px solid #1D2733",
+    "enfeite": "<span aria-hidden=\"true\" style=\"position:absolute;inset:-12px;border:1px solid #A0814A;border-radius:50%\"></span>",
+    "proporcao": "3/4"
    }
   },
   {
@@ -279,51 +280,53 @@
    }
   },
   "ana-elisa": {
-   "vol": 0.1,
-   "corte": 1800,
-   "drone": "D2",
+   "vol": 0.09,
+   "corte": 1600,
+   "drone": "F2",
    "pad": {
-    "onda": "triangle",
-    "dur": 12,
+    "onda": "sine",
+    "dur": 14,
     "acordes": [
      [
-      "D3",
+      "F3",
       "A3",
+      "C4",
       "E4"
      ],
      [
-      "G2",
       "D3",
-      "B3"
+      "F3",
+      "A3",
+      "C4"
      ],
      [
-      "E3",
-      "B3",
-      "A4"
+      "Bb2",
+      "D3",
+      "F3",
+      "A3"
      ],
      [
-      "A2",
+      "C3",
       "E3",
-      "D4"
+      "G3",
+      "Bb3"
      ]
     ]
    },
    "notas": {
     "onda": "triangle",
-    "sino": 2,
+    "sino": 0,
     "lista": [
-     "D5",
-     "E5",
-     "G5",
-     "A5",
-     "B5",
-     "D6",
+     "C5",
      "A4",
-     "G4"
+     "F4",
+     "G4",
+     "E5",
+     "D5"
     ],
-    "passo": 650,
-    "dens": 0.6,
-    "decai": 1.8
+    "passo": 900,
+    "dens": 0.4,
+    "decai": 2.4
    },
    "espacial": true
   },
