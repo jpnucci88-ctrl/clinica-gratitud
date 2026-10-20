@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Clínica Gratitud</title>
+<script>
+// Corrige endereços digitados com maiúscula, acento, "_" ou sem ".html" e leva à página certa.
+(function () {
+  var paginas = ['index','equipe','fernando','fernanda','odail','raissa','ana-elisa','tatiane','mauricio','sthefany','fabiane'];
+  var base = '/clinica-gratitud/';
+  var resto = decodeURIComponent(location.pathname).replace(/^\/clinica-gratitude?\/?/i, '');
+  var nome = resto.split('/').pop().toLowerCase()
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/\.html?$/, '').replace(/[_\s]+/g, '-');
+  var alvo = paginas.indexOf(nome) >= 0 ? nome : (paginas.filter(function (p) { return nome && p.indexOf(nome) === 0; })[0] || 'index');
+  location.replace(base + (alvo === 'index' ? '' : alvo + '.html') + location.hash);
+})();
+</script>
+<style>body{margin:0;font-family:system-ui,sans-serif;background:#301750;color:#FFFFFF;display:flex;min-height:100vh;align-items:center;justify-content:center;text-align:center;padding:24px}a{color:#59CAE8}</style>
+</head>
+<body>
+<p>Levando você para o site da Clínica Gratitud… Se nada acontecer, <a href="/clinica-gratitud/">toque aqui</a>.</p>
+</body>
+</html>
