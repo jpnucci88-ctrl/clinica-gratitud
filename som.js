@@ -85,6 +85,30 @@
       o.connect(g); g.connect(master); o.start(t); o.stop(t + 1.3);
     }, ms));
   }
+  function batida() { // batida leve (bumbo, palma, chimbal) — T.batida = {bpm, chimbal, palma}
+    if (!T.batida || reduz) return;
+    var B = T.batida, ms = 60000 / (B.bpm || 96) / 2, passo = 0;
+    var ruido = ctx.createBuffer(1, ctx.sampleRate * 0.3, ctx.sampleRate), d = ruido.getChannelData(0);
+    for (var i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
+    function bate(freq, dur, ganho, tipo) {
+      var t = ctx.currentTime, s = ctx.createBufferSource(), f = ctx.createBiquadFilter(), g = ctx.createGain();
+      s.buffer = ruido; f.type = tipo; f.frequency.value = freq;
+      g.gain.setValueAtTime(ganho, t); g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+      s.connect(f); f.connect(g); g.connect(sala.entrada); s.start(t); s.stop(t + dur);
+    }
+    timers.push(setInterval(function () {
+      if (!ctx) return;
+      var t = ctx.currentTime, p = passo++ % 8;
+      if (p === 0 || p === 3 || p === 4) { // bumbo
+        var o = ctx.createOscillator(), g = ctx.createGain();
+        o.frequency.setValueAtTime(120, t); o.frequency.exponentialRampToValueAtTime(45, t + 0.18);
+        g.gain.setValueAtTime(0.5, t); g.gain.exponentialRampToValueAtTime(0.0001, t + 0.45);
+        o.connect(g); g.connect(master); o.start(t); o.stop(t + 0.5);
+      }
+      if (B.palma && (p === 2 || p === 6)) bate(1500, 0.18, 0.18, 'bandpass');
+      if (B.chimbal) bate(8000, 0.05, p % 2 ? 0.05 : 0.08, 'highpass');
+    }, ms));
+  }
   function iniciar() {
     if (ctx || !ligado) return;
     ctx = new (window.AudioContext || window.webkitAudioContext)();
@@ -102,7 +126,7 @@
       lfo.connect(prof); prof.connect(filtro.frequency); lfo.start(); fontes.push(lfo);
     }
     master.gain.exponentialRampToValueAtTime(T.vol || 0.08, ctx.currentTime + (reduz ? 0.8 : 4));
-    drone(); pad(); notas(); pulso();
+    drone(); pad(); notas(); pulso(); batida();
   }
   function parar() {
     if (!ctx) return;
