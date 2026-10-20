@@ -156,5 +156,14 @@
   });
   marcar();
   ['pointerdown', 'keydown', 'touchstart'].forEach(function (n) { addEventListener(n, primeiroGesto, true); });
+  // quem já interagiu com o site (ex.: veio pelo menu) não precisa tocar de novo: tenta começar já
+  if (ligado) {
+    iniciar();
+    if (ctx && ctx.state === 'suspended') { // navegador ainda bloqueou: o primeiro gesto destrava
+      var destrava = function () { if (ctx) ctx.resume(); };
+      ['pointerdown', 'keydown', 'touchstart'].forEach(function (n) { addEventListener(n, destrava, { capture: true, once: true }); });
+    }
+  }
+  addEventListener('pageshow', function (e) { if (e.persisted && ligado) { parar(); setTimeout(iniciar, 50); } });
   addEventListener('pagehide', parar);
 })();

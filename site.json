@@ -275,28 +275,32 @@
    }
   },
   "ana-elisa": {
-   "vol": 0.07,
-   "corte": 1000,
-   "drone": "E2",
+   "vol": 0.1,
+   "corte": 1800,
+   "drone": "D2",
    "pad": {
-    "onda": "sine",
-    "dur": 16,
+    "onda": "triangle",
+    "dur": 12,
     "acordes": [
      [
-      "E3",
+      "D3",
+      "A3",
+      "E4"
+     ],
+     [
+      "G2",
+      "D3",
       "B3"
+     ],
+     [
+      "E3",
+      "B3",
+      "A4"
      ],
      [
       "A2",
-      "E3"
-     ],
-     [
-      "F3",
-      "C4"
-     ],
-     [
       "E3",
-      "B3"
+      "D4"
      ]
     ]
    },
@@ -304,17 +308,20 @@
     "onda": "triangle",
     "sino": 2,
     "lista": [
-     "E4",
-     "F4",
+     "D5",
+     "E5",
+     "G5",
+     "A5",
+     "B5",
+     "D6",
      "A4",
-     "B4",
-     "C5",
-     "E5"
+     "G4"
     ],
-    "passo": 2200,
-    "dens": 0.3,
-    "decai": 3.2
-   }
+    "passo": 650,
+    "dens": 0.6,
+    "decai": 1.8
+   },
+   "espacial": true
   },
   "odail": {
    "vol": 0.08,
@@ -421,11 +428,11 @@
    }
   },
   "tatiane": {
-   "vol": 0.08,
+   "vol": 0.11,
    "corte": 1800,
    "drone": "F2",
    "pad": {
-    "onda": "sine",
+    "onda": "triangle",
     "dur": 10,
     "acordes": [
      [
@@ -461,7 +468,7 @@
      "E5"
     ],
     "passo": 900,
-    "dens": 0.5,
+    "dens": 0.6,
     "decai": 2
    }
   },
@@ -517,6 +524,53 @@
     "chimbal": true,
     "palma": true
    }
+  },
+  "sthefany": {
+   "vol": 0.1,
+   "corte": 1300,
+   "drone": "A2",
+   "pad": {
+    "onda": "sine",
+    "dur": 8,
+    "acordes": [
+     [
+      "A2",
+      "E3",
+      "C#4",
+      "E4"
+     ],
+     [
+      "F#2",
+      "C#3",
+      "A3",
+      "E4"
+     ],
+     [
+      "D3",
+      "A3",
+      "F#4"
+     ],
+     [
+      "E3",
+      "B3",
+      "G#4"
+     ]
+    ]
+   },
+   "notas": {
+    "onda": "sine",
+    "sino": 3,
+    "lista": [
+     "C#5",
+     "E5",
+     "A5",
+     "B5"
+    ],
+    "passo": 2000,
+    "dens": 0.45,
+    "decai": 3.5
+   },
+   "espacial": true
   }
  }
 }
