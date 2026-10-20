@@ -163,6 +163,10 @@
   "horario": "Segunda a sexta, das 8h às 18h30",
   "links": [
    {
+    "texto": "Entrar na lista de prioridade",
+    "url": "https://wa.me/5519996384455?text=Ol%C3%A1!%20Gostaria%20de%20entrar%20na%20lista%20de%20prioridade%20da%20agenda."
+   },
+   {
     "texto": "WhatsApp (19) 99638-4455",
     "url": "https://wa.me/5519996384455"
    },
