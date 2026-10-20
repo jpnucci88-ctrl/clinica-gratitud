@@ -68,9 +68,12 @@
     timers.push(setInterval(function () {
       if (!ctx || Math.random() > (N.dens || 0.4)) return;
       var n = N.ordem ? N.lista[k++ % N.lista.length] : N.lista[Math.floor(Math.random() * N.lista.length)];
-      var f = hz(n), t = ctx.currentTime;
-      voz(f, N.onda || 'sine', t, 0.02, N.decai || 3, 0.1, sala.entrada);
-      if (N.sino) voz(f * N.sino, 'sine', t, 0.005, (N.decai || 3) * 0.4, 0.03, sala.entrada);
+      var f = hz(n), t = ctx.currentTime, destino = sala.entrada;
+      if (T.espacial && ctx.createStereoPanner) { // 3D: cada nota nasce num ponto diferente do espaço
+        var pan = ctx.createStereoPanner(); pan.pan.value = Math.sin(t * 2.3) * 0.75; pan.connect(sala.entrada); destino = pan;
+      }
+      voz(f, N.onda || 'sine', t, 0.02, N.decai || 3, 0.1, destino);
+      if (N.sino) voz(f * N.sino, 'sine', t, 0.005, (N.decai || 3) * 0.4, 0.03, destino);
     }, N.passo || 1600));
   }
   function pulso() {
