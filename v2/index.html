@@ -133,7 +133,7 @@ html:not(.js) .passo .eco,html:not(.js) .foto-passo{display:none}
 .ladrilho h2.palavra{color:inherit}
 .ladrilho .leg{position:absolute;left:12px;right:12px;bottom:18px;text-align:center;font-size:14px;line-height:1.3}
 .ladrilho .obt{display:block;width:74%;margin-bottom:12cqw}
-.ladrilho .retrato img{object-position:center 16%}
+.ladrilho .retrato img{object-position:center 30%}
 .ladrilho .retrato{width:100%;transition:transform .5s var(--ease-out)}
 .ladrilho a:hover .palavra,.ladrilho a:focus-visible .palavra{transform:scale(1.06)}
 .ladrilho a:hover .retrato,.ladrilho a:focus-visible .retrato{transform:scale(1.05) rotate(2deg)}
@@ -160,7 +160,7 @@ html:not(.js) .passo .eco,html:not(.js) .foto-passo{display:none}
 .cupom-esq h3{font-size:clamp(1.75rem,3vw,2.75rem);font-weight:600;line-height:1}
 .cupom-esq .sub{margin:16px 0 0;font-size:16px;color:var(--clara)}
 .previa{margin:0;padding:20px 22px;background:var(--campo);font-size:16px;line-height:1.5;border-radius:4px 18px 18px 18px}
-.previa b{display:block;font-size:15px;color:#fff;margin-bottom:6px;font-weight:600}
+.previa b{display:block;font-size:16px;color:#fff;margin-bottom:6px;font-weight:600}
 .cupom-dir{position:relative;padding:48px;border-left:5px dotted var(--chao);display:flex;flex-direction:column;gap:10px}
 .campo{display:flex;align-items:center;gap:16px;min-height:52px;padding:0 18px;background:var(--campo);border-radius:4px;font-size:16px}
 .campo>span{flex:0 0 7.5em;color:var(--clara)}
@@ -188,11 +188,13 @@ html.js .obt.visto img,html.js img.obt.visto{transform:none}
 /* ---------- rodapé ---------- */
 .rodape .rotulo{display:block;color:#fff;font-weight:600;margin-bottom:4px}
 .rodape .cols>div{min-width:200px}
-.rodape .nome{font-size:clamp(4rem,21.5vw,22rem)}
+.rodape{overflow:hidden}
+.rodape .nome{font-size:clamp(4rem,25vw,30rem)}
 .rodape ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
 
 /* ---------- telas menores ---------- */
 @media (max-width:1000px){
+  .rostos{gap:8px}
   .itens{grid-template-columns:1fr;gap:28px}
   .agendar-topo{grid-template-columns:1fr}
   .agendar-topo p{grid-column:1}
@@ -224,7 +226,7 @@ html.js .obt.visto img,html.js img.obt.visto{transform:none}
   .rostos{gap:8px}.rostos li{width:calc((100% - 32px) / 5)}
   .intro{text-align:left;padding:96px var(--margem)}
   .intro h2,.intro .frase,.intro .valores{margin-left:0;max-width:none}
-  .intro .frase{font-size:clamp(1.375rem,6vw,1.5rem);line-height:1.25}
+  .intro .frase{font-size:1.3rem;line-height:1.25}
   .mini{height:1em;vertical-align:-.15em}
   .mini.so-grande{display:none}
   .grupo{margin-top:72px}
@@ -233,7 +235,7 @@ html.js .obt.visto img,html.js img.obt.visto{transform:none}
   .item .retrato,.inicial{width:60px}
   .inicial{font-size:60px}
   .parede{grid-template-columns:1fr 1fr;gap:6px;padding:0 6px}
-  .ladrilho .leg{font-size:13px;bottom:12px;left:8px;right:8px}
+  .ladrilho .leg{font-size:13px;bottom:12px;left:14px;right:14px}
   .cupom-esq,.cupom-dir{padding:28px 20px}
   .campo>span{flex-basis:6.2em}
   .campo,.lista{min-height:54px}
