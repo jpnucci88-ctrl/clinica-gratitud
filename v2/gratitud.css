@@ -1,0 +1,47 @@
+:root{
+  --chao:#FBF8FF;      /* fundo */
+  --tinta:#301750;     /* texto (noite da marca) */
+  --tinta-suave:#4A3A6E;
+  --roxo:#4C13A2;      /* cor principal da marca (exceção de marca à regra "sem violeta") */
+  --azul:#59CAE8;      /* acento: só no botão de ação e no motivo */
+  --clara:#C8E5F1;
+  --lilas:#ECE4FA;     /* um passo de tom acima do chão */
+  --margem:clamp(16px,4vw,32px);
+  --raio:0;            /* cantos retos; a forma com caráter é só o coração */
+  --step-small:clamp(0.8125rem,0.79rem + 0.1vw,0.875rem);
+  --step-body:clamp(1.0625rem,1rem + 0.25vw,1.1875rem);
+  --step-lead:clamp(1.25rem,1.1rem + 0.7vw,1.625rem);
+  --step-head:clamp(2rem,1.3rem + 3.2vw,4rem);
+  --step-hero:clamp(3.5rem,8vw,8rem);
+  --motivo:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2056%22%3E%3Ccircle%20cx%3D%2219%22%20cy%3D%229%22%20r%3D%227%22/%3E%3Ccircle%20cx%3D%2245%22%20cy%3D%229%22%20r%3D%227%22/%3E%3Cpath%20d%3D%22M32%2054C13%2041%204%2031%206%2022c2-8%2011-11%2018-6%204%203%206%207%208%2010%202-3%204-7%208-10%207-5%2016-2%2018%206%202%209-7%2019-26%2032z%22/%3E%3C/svg%3E");   /* o coração com duas cabeças do logo */
+  --coracao:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2044%22%3E%3Cpath%20d%3D%22M32%2042C13%2029%204%2019%206%2010c2-8%2011-11%2018-6%204%203%206%207%208%2010%202-3%204-7%208-10%207-5%2016-2%2018%206%202%209-7%2019-26%2032z%22%20transform%3D%22translate%280%2C-12%29%20translate%280%2C12%29%22/%3E%3C/svg%3E");  /* só o coração, para marcadores e botões */
+  --fonte:'Roundo',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:72px}
+body{margin:0;background:var(--chao);color:var(--tinta);font:400 var(--step-body)/1.5 var(--fonte)}
+h1,h2,h3{font-family:var(--fonte);font-weight:500;letter-spacing:-0.025em;line-height:1.05;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--azul);outline-offset:3px}
+.moldura{-webkit-mask:var(--motivo) center/contain no-repeat;mask:var(--motivo) center/contain no-repeat;aspect-ratio:64/56;object-fit:cover}
+.marcador{display:inline-block;width:.9em;height:.8em;background:currentColor;-webkit-mask:var(--coracao) center/contain no-repeat;mask:var(--coracao) center/contain no-repeat;vertical-align:-.05em}
+.botao{display:inline-flex;align-items:center;gap:.6em;min-height:52px;padding:0 28px;border-radius:999px;background:var(--azul);color:var(--tinta);font:600 var(--step-body)/1 var(--fonte);text-decoration:none;border:0;cursor:pointer;transition:transform .2s,background .2s}
+.botao:hover{background:#fff;transform:translateY(-2px)}
+.botao:active{transform:translateY(1px)}
+.barra{position:sticky;top:0;z-index:50;background:var(--tinta);color:#fff}
+.barra-in{display:flex;align-items:center;gap:24px;padding:12px var(--margem);max-width:1440px;margin:0 auto}
+.barra a{text-decoration:none}
+.barra .marca{display:flex;align-items:center;gap:10px;font-weight:600;font-size:22px}
+.barra .links{display:flex;gap:20px;margin-left:auto;font-size:16px}
+.barra .links a:hover{color:var(--azul)}
+.barra .botao{min-height:44px;padding:0 20px}
+@media (max-width:720px){.barra .links{display:none}.barra .botao{margin-left:auto}}
+.rodape{background:var(--tinta);color:var(--clara);padding:96px var(--margem) 40px}
+.rodape .nome{font-size:clamp(4rem,16vw,14rem);font-weight:500;letter-spacing:-.04em;line-height:.9;color:#fff;margin:0 0 48px}
+.rodape-in{max-width:1440px;margin:0 auto}
+.rodape .cols{display:flex;flex-wrap:wrap;gap:24px 64px}
+.rodape a{color:var(--clara)}
+.rodape small{display:block;margin-top:48px;font-size:var(--step-small);opacity:.85}
+html.js .sobe{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.2,1)}
+html.js .sobe.visto{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html.js .sobe{opacity:1;transform:none;transition:none}*{scroll-behavior:auto}}
