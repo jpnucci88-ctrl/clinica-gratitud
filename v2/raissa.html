@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Raíssa, fonoaudióloga | Clínica Gratitud</title>
+<meta name="description" content="Raíssa Morato Duarte, fonoaudióloga da Clínica Gratitud em Jaguariúna: linguagem oral, leitura e escrita, estimulação precoce, voz, motricidade orofacial e Processamento Auditivo Central.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=roundo@400,500,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="gratitud.css">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --ease-out:cubic-bezier(.22,1,.36,1);
+  --ease-expo:cubic-bezier(.16,1,.3,1);
+  --ease-soft:cubic-bezier(.33,1,.68,1);
+  --largura:1440px;
+}
+.dentro{max-width:var(--largura);margin:0 auto;padding-left:var(--margem);padding-right:var(--margem)}
+.secao{padding-top:clamp(80px,8vw,128px);padding-bottom:clamp(80px,8vw,128px)}
+h2{font-size:var(--step-head)}
+p{margin:0}
+.lead{font-size:var(--step-lead);line-height:1.35;max-width:32ch}
+
+/* ---------- topo: a noite do castelo ---------- */
+.ceu{background:var(--tinta);color:#fff;overflow:clip}
+.heroi{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:clamp(24px,3vw,56px);align-items:end;padding-top:clamp(24px,3vw,48px)}
+.heroi-texto{align-self:center;padding-bottom:clamp(40px,6vw,96px)}
+.chao{background:var(--roxo);margin-top:-1px;position:relative}
+.chao .dentro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:clamp(24px,3vw,56px)}
+.heroi h1{font-size:clamp(2.6rem,5.2vw,5.4rem);line-height:1;letter-spacing:-.03em}
+.heroi .lead{margin-top:clamp(24px,2.6vw,40px);color:#fff}
+.acoes{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;margin-top:clamp(28px,3vw,44px)}
+.ceu .link{color:var(--clara);text-underline-offset:.25em;text-decoration-thickness:.06em;transition:color .18s ease}
+.ceu .link:hover{color:#fff}
+
+/* a cena desenhada */
+.cena{position:relative;margin:0 calc(-1 * var(--margem)) 0 0}
+.cena svg{display:block;width:100%;height:auto}
+.balao{position:absolute;margin:0;padding:.45em .8em .5em;border-radius:999px;font-size:var(--step-lead);font-weight:600;line-height:1;white-space:nowrap;color:var(--tinta);background:#fff;pointer-events:none}
+.balao::after{content:"";position:absolute;width:18px;height:18px;background:inherit;bottom:-7px;transform:rotate(45deg);border-radius:3px}
+.balao-coruja{left:4%;bottom:62%}
+.balao-coruja::after{left:28%}
+.balao-gato{left:57%;bottom:50%;background:var(--azul)}
+.balao-gato::after{left:22%}
+.balao .s{display:inline-block}
+.balao .s+.s::before{content:"-";margin:0 .04em}
+.toque{position:absolute;left:7%;top:38%;width:26%;height:52%;border:0;border-radius:50% 50% 30% 30%;background:transparent;cursor:pointer}
+.toque:focus-visible{outline:3px solid var(--azul);outline-offset:4px}
+.jogo{grid-column:2;display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;padding:4px 0 clamp(28px,3vw,44px)}
+.jogo p{flex:1 1 300px;color:#fff;font-size:var(--step-body)}
+.botao-2{display:inline-flex;align-items:center;gap:.5em;min-height:48px;padding:0 22px;border:0;border-radius:999px;background:var(--tinta);color:#fff;font:600 var(--step-body)/1 var(--fonte);cursor:pointer;transition:transform .14s var(--ease-out),background .18s ease}
+.botao-2:active{transform:scale(.97)}
+.botao-2[aria-pressed="true"]{background:var(--azul);color:var(--tinta)}
+@media (hover:hover) and (pointer:fine){.botao-2:hover{background:#fff;color:var(--tinta)}.botao-2[aria-pressed="true"]:hover{background:#fff}}
+html:not(.js) .jogo .botao-2,html:not(.js) .toque{display:none}
+.sem-voz [data-voz]{display:none}
+
+/* movimentos da cena */
+.svg-mov{transform-box:fill-box}
+.estrela{transform-box:fill-box;transform-origin:center}
+.palpebra{transform-box:fill-box;transform-origin:50% 0;transform:scaleY(0)}
+.rabo{transform-box:view-box}
+.boca-aberta{opacity:0;transition:opacity .15s ease}
+.fala .boca-aberta{opacity:1}
+@media (prefers-reduced-motion:no-preference){
+  .estrela{animation:brilha 3.2s ease-in-out infinite}
+  .estrela:nth-of-type(3n){animation-delay:-1.1s;animation-duration:4s}
+  .estrela:nth-of-type(3n+1){animation-delay:-2.3s}
+  .palpebra{animation:pisca 5s ease-in-out infinite}
+  .gato-b .palpebra{animation-delay:-2.2s;animation-duration:6.5s}
+  .coruja .palpebra{animation-delay:-3.4s;animation-duration:4.4s}
+  .gato-a .rabo{transform-origin:648px 486px;animation:abana 3.6s ease-in-out infinite}
+  .gato-b .rabo{transform-origin:714px 492px;animation:abana 4.4s ease-in-out infinite reverse}
+  .gato-b{animation:chega 2.2s var(--ease-soft) .2s both}
+  .gato-b .passo{animation:passo .4s ease-in-out 5 .2s}
+  .orelha{transform-box:fill-box;transform-origin:50% 100%;animation:orelha 7s ease-in-out infinite}
+  .coruja,.gato-a{transform-box:fill-box;transform-origin:50% 100%;transition:transform .3s var(--ease-out)}
+  .coruja.fala{transform:translateY(-8px) rotate(-3deg)}
+  .gato-a.fala{transform:translateY(-6px) rotate(3deg)}
+  .lua{transform-box:fill-box;transform-origin:center;animation:lua 12s ease-in-out infinite}
+  .balao .s{animation:silaba .45s var(--ease-out) both;animation-delay:calc(var(--i) * 320ms)}
+  .balao-gato .s{animation-delay:calc(var(--i) * 260ms)}
+}
+@keyframes brilha{0%,100%{opacity:.35;transform:scale(.75)}50%{opacity:1;transform:scale(1.1)}}
+@keyframes pisca{0%,92%,100%{transform:scaleY(0)}95%{transform:scaleY(1)}}
+@keyframes abana{0%,100%{transform:rotate(0)}50%{transform:rotate(14deg)}}
+@keyframes chega{from{transform:translateX(90px)}to{transform:none}}
+@keyframes passo{50%{transform:translateY(-4px)}}
+@keyframes orelha{0%,90%,100%{transform:none}93%{transform:rotate(-12deg)}96%{transform:rotate(4deg)}}
+@keyframes lua{50%{transform:translateY(-6px)}}
+@keyframes silaba{from{opacity:0;transform:translateY(.4em) scale(.8)}to{opacity:1;transform:none}}
+
+/* ---------- quem é ---------- */
+.quem{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,112px);align-items:center}
+.quem .foto{width:100%;height:auto;max-width:680px;display:block;object-position:50% 42%;background:var(--lilas)}
+.quem .lead{margin-top:clamp(20px,2.4vw,36px);max-width:30ch}
+.fatos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 32px;margin:clamp(32px,4vw,56px) 0 0}
+.fatos dt{font-size:var(--step-body);color:var(--tinta-suave)}
+.fatos dd{margin:4px 0 0;font-size:var(--step-lead);font-weight:500;line-height:1.2}
+.fatos a{text-underline-offset:.2em;text-decoration-thickness:.06em}
+
+/* ---------- onde atua ---------- */
+.atua{background:var(--lilas)}
+.atua-topo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px clamp(32px,6vw,112px);align-items:end}
+.atua-topo p{max-width:44ch}
+.areas{list-style:none;margin:clamp(40px,5vw,72px) 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,2.4vw,36px) clamp(32px,6vw,112px)}
+.areas li{display:flex;gap:.6em;font-size:var(--step-lead);font-weight:500;line-height:1.2}
+.areas .marcador{flex:none;margin-top:.22em;color:var(--roxo)}
+.areas small{display:block;margin-top:6px;font-size:var(--step-body);font-weight:400;line-height:1.45;color:var(--tinta-suave)}
+
+/* ---------- TDL e autismo ---------- */
+.tdl{background:var(--roxo);color:#fff}
+.tdl h2{max-width:16ch}
+.lados{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;margin-top:clamp(40px,5vw,72px)}
+.lado{padding:clamp(28px,3.4vw,56px)}
+.lado:first-child{background:#5d22c0}
+.lado:last-child{background:var(--tinta)}
+.lado h3{font-size:var(--step-lead);font-weight:600;letter-spacing:-.01em}
+.lado p{margin-top:14px;max-width:40ch}
+.tdl-fim{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px clamp(32px,6vw,112px);margin-top:clamp(40px,5vw,72px);align-items:start}
+.tdl-fim>p{font-size:var(--step-lead);line-height:1.35;max-width:30ch}
+.curtos{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.curtos a{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 20px;background:#5d22c0;color:#fff;text-decoration:none;font-size:var(--step-lead);line-height:1.2;transition:background .18s ease,color .18s ease}
+.curtos a svg{flex:none;transition:transform .3s var(--ease-out)}
+@media (hover:hover) and (pointer:fine){.curtos a:hover{background:#fff;color:var(--tinta)}.curtos a:hover svg{transform:translate(3px,-3px)}}
+
+/* ---------- Podtud ---------- */
+.pod-topo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px clamp(32px,6vw,112px);align-items:end}
+.pod-topo p{max-width:44ch}
+.eps{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,3vw,48px);margin-top:clamp(40px,5vw,72px);align-items:start}
+.ep{display:block;text-decoration:none;color:inherit}
+.ep:nth-child(2){margin-top:clamp(0px,12vw,180px)}
+.ep .capa{overflow:clip;aspect-ratio:16/9;background:var(--tinta)}
+.ep img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s var(--ease-soft)}
+.ep h3{margin-top:20px;font-size:var(--step-lead);font-weight:500;line-height:1.2}
+.ep p{margin-top:8px;color:var(--tinta-suave);max-width:46ch}
+@media (hover:hover) and (pointer:fine){.ep:hover img{transform:scale(1.04)}.ep:hover h3{text-decoration:underline;text-underline-offset:.2em;text-decoration-thickness:.06em}}
+
+/* ---------- agendar ---------- */
+.agenda{background:var(--roxo);color:#fff}
+.agenda-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,112px);align-items:center}
+.agenda .lead{margin-top:clamp(20px,2.4vw,36px);max-width:34ch}
+.agenda .info{margin-top:24px;color:var(--clara)}
+.agenda .acoes{margin-top:clamp(28px,3vw,44px)}
+.soneca svg{display:block;width:100%;max-width:620px;height:auto;margin-left:auto}
+.respira{transform-box:fill-box;transform-origin:50% 100%}
+@media (prefers-reduced-motion:no-preference){.respira{animation:respira 4.2s ease-in-out infinite}}
+@keyframes respira{50%{transform:scaleY(1.035)}}
+
+.rodape .cols>div{display:flex;flex-direction:column;gap:6px}
+.rodape .cols b{color:#fff;font-weight:600}
+
+/* ---------- telefone ---------- */
+@media (max-width:900px){
+  .heroi,.quem,.atua-topo,.tdl-fim,.pod-topo,.agenda-in,.chao .dentro{grid-template-columns:1fr}
+  .jogo{grid-column:1}
+  .heroi-texto{padding-bottom:8px}
+  .cena{margin:0 calc(-1 * var(--margem))}
+  .eps{grid-template-columns:1fr}
+  .ep:nth-child(2){margin-top:0}
+  .quem .foto{max-width:520px;margin:0 auto}
+  .soneca svg{margin:0 auto;max-width:440px}
+}
+@media (max-width:640px){
+  .areas,.lados,.fatos{grid-template-columns:1fr}
+  .balao{font-size:18px}
+  .balao-coruja{left:3%;bottom:61%}
+  .balao-gato{left:auto;right:3%;bottom:51%}
+  .barra .botao{padding:0 16px;white-space:nowrap;font-size:16px}
+  .barra .marca{font-size:20px}
+  .barra-in{gap:12px}
+}
+</style>
+</head>
+<body>
+<header class="barra">
+  <div class="barra-in">
+    <a class="marca" href="index.html" aria-label="Clínica Gratitud, página inicial"><svg viewBox="0 0 64 56" aria-hidden="true" width="34" height="30" fill="none" stroke="#59CAE8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><circle cx="19" cy="9" r="7" fill="#59CAE8" stroke="none"/><circle cx="45" cy="9" r="5.5" stroke-width="3.5"/><path d="M32 52C14 40 6 31 8 23c2-7 10-9 16-5 4 3 6 7 8 10 2-3 4-7 8-10 6-4 14-2 16 5 2 8-6 17-24 29z"/></svg>Gratitud</a>
+    <nav class="links" aria-label="Páginas"><a href="index.html#equipe">Equipe</a><a href="#contato">Contato</a></nav>
+    <a class="botao" href="https://wa.me/5519996384455?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20com%20a%20Ra%C3%ADssa" target="_blank" rel="noopener">Agendar com a Raíssa</a>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<section class="ceu" aria-labelledby="titulo">
+  <div class="dentro heroi">
+    <div class="heroi-texto">
+      <h1 id="titulo">Raíssa, fonoaudióloga</h1>
+      <p class="lead">Raíssa Morato Duarte cuida da fala, da linguagem, da leitura e da escrita de crianças e adultos na Clínica Gratitud, em Jaguariúna.</p>
+      <div class="acoes">
+        <a class="botao" href="https://wa.me/5519996384455?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20com%20a%20Ra%C3%ADssa" target="_blank" rel="noopener">Agendar com a Raíssa</a>
+        <a class="link" href="https://www.instagram.com/fonoraissamd" target="_blank" rel="noopener">@fonoraissamd no Instagram</a>
+      </div>
+    </div>
+
+      <figure class="cena" id="cena">
+        <svg viewBox="0 0 800 620" role="img" aria-labelledby="cena-t">
+          <title id="cena-t">Desenho: uma coruja branca sentada em livros, um castelo roxo com janelas acesas numa noite de estrelas e dois gatinhos num muro de pedra.</title>
+          <defs>
+            <path id="brilho" d="M0-10C1-3 3-1 10 0 3 1 1 3 0 10-1 3-3 1-10 0-3-1-1-3 0-10z"/>
+            <path id="janela" d="M0 0V-14A9 9 0 0 1 18-14V0z"/>
+            <clipPath id="lua-c"><circle cx="655" cy="108" r="58"/></clipPath>
+          </defs>
+
+          <!-- estrelas -->
+          <g fill="#C8E5F1">
+            <g transform="translate(70 60) scale(.9)"><use class="estrela" href="#brilho"/></g>
+            <g transform="translate(190 130) scale(.6)"><use class="estrela" href="#brilho"/></g>
+            <g transform="translate(300 40) scale(1.1)"><use class="estrela" href="#brilho"/></g>
+            <g transform="translate(380 190) scale(.5)"><use class="estrela" href="#brilho" fill="#fff"/></g>
+            <g transform="translate(540 50) scale(.7)"><use class="estrela" href="#brilho" fill="#fff"/></g>
+            <g transform="translate(760 220) scale(.8)"><use class="estrela" href="#brilho"/></g>
+            <g transform="translate(560 200) scale(.45)"><use class="estrela" href="#brilho"/></g>
+            <g transform="translate(30 250) scale(.55)"><use class="estrela" href="#brilho" fill="#fff"/></g>
+            <g transform="translate(250 230) scale(.4)"><use class="estrela" href="#brilho"/></g>
+            <g transform="translate(740 30) scale(.5)"><use class="estrela" href="#brilho" fill="#fff"/></g>
+          </g>
+          <g fill="#fff" opacity=".7"><circle cx="130" cy="200" r="2"/><circle cx="420" cy="110" r="2"/><circle cx="600" cy="250" r="1.6"/><circle cx="230" cy="90" r="1.6"/><circle cx="720" cy="300" r="2"/><circle cx="350" cy="120" r="1.4"/></g>
+
+          <!-- lua -->
+          <g class="lua">
+            <circle cx="655" cy="108" r="58" fill="#DCD0F5"/>
+            <circle cx="642" cy="118" r="56" fill="#F6F2FD" clip-path="url(#lua-c)"/>
+            <circle cx="630" cy="92" r="10" fill="#E8E0F9"/><circle cx="660" cy="132" r="7" fill="#E8E0F9"/><circle cx="618" cy="134" r="5" fill="#E8E0F9"/><circle cx="676" cy="98" r="4" fill="#E8E0F9"/>
+          </g>
+
+          <!-- morros ao fundo -->
+          <path d="M0 620C30 520 110 446 210 436 290 430 320 444 360 452S610 405 800 446V620H0z" fill="#3D1D66"/>
+
+          <!-- castelo -->
+          <g>
+            <!-- torre alta do meio -->
+            <rect x="430" y="160" width="34" height="260" fill="#B39CEB"/>
+            <rect x="464" y="160" width="22" height="260" fill="#9479DB"/>
+            <path d="M420 162 458 66V162z" fill="#7A4BDE"/><path d="M458 66 496 162H458z" fill="#6234C4"/>
+            <rect x="416" y="156" width="84" height="12" rx="6" fill="#6234C4"/>
+            <rect x="456.5" y="34" width="3" height="34" fill="#C8E5F1"/>
+            <path d="M472 52c-6-4-10-7-10-11 0-3 3-4 5-3 2 1 3 3 5 4 2-1 3-3 5-4 2-1 5 0 5 3 0 4-4 7-10 11z" fill="#59CAE8" transform="translate(-8 -6) scale(1.1)"/>
+            <use href="#janela" x="448" y="226" fill="#FFE6A0"/>
+            <use href="#janela" x="448" y="286" fill="#301750"/>
+            <!-- torre da esquerda -->
+            <rect x="296" y="248" width="46" height="222" fill="#B39CEB"/>
+            <rect x="342" y="248" width="28" height="222" fill="#9479DB"/>
+            <path d="M286 250 333 146V250z" fill="#7A4BDE"/><path d="M333 146 380 250H333z" fill="#6234C4"/>
+            <rect x="282" y="244" width="102" height="12" rx="6" fill="#6234C4"/>
+            <use href="#janela" x="315" y="300" fill="#FFE6A0"/>
+            <use href="#janela" x="315" y="360" fill="#FFE6A0"/>
+            <rect x="319" y="285" width="10" height="3" rx="1.5" fill="#9479DB"/>
+            <!-- torre da direita -->
+            <rect x="560" y="268" width="40" height="202" fill="#B39CEB"/>
+            <rect x="600" y="268" width="26" height="202" fill="#9479DB"/>
+            <path d="M550 270 593 178V270z" fill="#7A4BDE"/><path d="M593 178 636 270H593z" fill="#6234C4"/>
+            <rect x="546" y="264" width="94" height="12" rx="6" fill="#6234C4"/>
+            <use href="#janela" x="584" y="318" fill="#301750"/>
+            <use href="#janela" x="584" y="378" fill="#FFE6A0"/>
+            <!-- corpo do castelo -->
+            <rect x="360" y="330" width="182" height="140" fill="#B39CEB"/>
+            <rect x="542" y="330" width="22" height="140" fill="#9479DB"/>
+            <g fill="#B39CEB"><rect x="360" y="314" width="24" height="20" rx="4"/><rect x="398" y="314" width="24" height="20" rx="4"/><rect x="436" y="314" width="24" height="20" rx="4"/><rect x="474" y="314" width="24" height="20" rx="4"/><rect x="512" y="314" width="24" height="20" rx="4"/></g>
+            <rect x="542" y="314" width="22" height="20" rx="4" fill="#9479DB"/>
+            <!-- rosácea -->
+            <circle cx="451" cy="370" r="20" fill="#9479DB"/>
+            <circle cx="451" cy="370" r="15" fill="#FFE6A0"/>
+            <rect x="449.5" y="355" width="3" height="30" fill="#9479DB"/><rect x="436" y="368.5" width="30" height="3" fill="#9479DB"/>
+            <use href="#janela" x="380" y="392" fill="#FFE6A0"/>
+            <use href="#janela" x="506" y="392" fill="#FFE6A0"/>
+            <!-- porta -->
+            <path d="M428 470V438a23 23 0 0 1 46 0v32z" fill="#5A2E8F"/>
+            <path d="M434 470V440a17 17 0 0 1 34 0v30z" fill="#6B3BA6"/>
+            <rect x="449.5" y="424" width="3" height="46" fill="#5A2E8F"/>
+            <circle cx="460" cy="452" r="2.6" fill="#FFE6A0"/>
+            <!-- muro baixo -->
+            <rect x="270" y="456" width="384" height="22" rx="4" fill="#9479DB"/>
+            <path d="M426 478h50l26 30H400z" fill="#C9B6F0"/>
+          </g>
+
+          <!-- chão da frente -->
+          <path d="M0 620C16 574 54 540 120 526 220 500 330 496 420 506S690 482 800 502V620H0z" fill="#4C13A2"/>
+          <g fill="#3D0F85"><path d="M60 560q4-12 8 0q4-10 8 0z"/><path d="M330 540q4-12 8 0q4-10 8 0z"/><path d="M420 590q4-12 8 0q4-10 8 0z"/><path d="M250 600q4-10 8 0q4-8 8 0z"/></g>
+
+          <g transform="translate(167 568) scale(1.1) translate(-167 -568)">
+          <!-- livros -->
+          <g>
+            <rect x="72" y="532" width="190" height="34" rx="6" fill="#59CAE8"/>
+            <rect x="80" y="540" width="174" height="6" rx="3" fill="#C8E5F1"/>
+            <rect x="96" y="532" width="10" height="34" fill="#3FA9C9"/>
+            <rect x="88" y="500" width="164" height="32" rx="6" fill="#C9B6F0"/>
+            <rect x="96" y="508" width="148" height="6" rx="3" fill="#F6F2FD"/>
+            <rect x="222" y="500" width="10" height="32" fill="#A68BE3"/>
+            <rect x="100" y="472" width="140" height="28" rx="6" fill="#F6F2FD"/>
+            <rect x="108" y="479" width="124" height="5" rx="2.5" fill="#DCD0F5"/>
+            <rect x="112" y="472" width="9" height="28" fill="#59CAE8"/>
+          </g>
+
+          <!-- coruja -->
+          <g class="coruja" id="coruja">
+            <ellipse cx="170" cy="402" rx="68" ry="76" fill="#F4F1FB"/>
+            <path d="M206 340c30 22 34 82 4 128-8 4-16 4-22 4 22-38 26-92 18-132z" fill="#E4DDF3"/>
+            <path d="M104 380c-14 44 0 80 30 94-4-34-6-66-30-94z" fill="#E9E3F6"/>
+            <path d="M236 380c14 44 0 80-30 94 4-34 6-66 30-94z" fill="#DDD5EF"/>
+            <circle cx="170" cy="330" r="58" fill="#F4F1FB"/>
+            <path d="M120 300c10-18 30-28 50-28s40 10 50 28c-14-6-32-8-50-8s-36 2-50 8z" fill="#FFFFFF"/>
+            <ellipse cx="146" cy="330" rx="26" ry="25" fill="#FFFFFF"/>
+            <ellipse cx="194" cy="330" rx="26" ry="25" fill="#FFFFFF"/>
+            <g fill="#A99BCB"><path d="M140 400q6 5 12 0q-6 2-12 0z"/><path d="M172 418q6 5 12 0q-6 2-12 0z"/><path d="M150 438q6 5 12 0q-6 2-12 0z"/><path d="M188 444q6 5 12 0q-6 2-12 0z"/><path d="M196 396q6 5 12 0q-6 2-12 0z"/><path d="M118 420q5 4 10 0q-5 2-10 0z"/><path d="M214 424q5 4 10 0q-5 2-10 0z"/><path d="M168 280q5 4 10 0q-5 2-10 0z"/><path d="M146 290q4 3 8 0q-4 2-8 0z"/><path d="M188 290q4 3 8 0q-4 2-8 0z"/></g>
+            <g>
+              <circle cx="148" cy="328" r="17" fill="#FFD54A"/>
+              <circle cx="148" cy="329" r="9" fill="#301750"/>
+              <circle cx="151" cy="325" r="3.2" fill="#fff"/>
+              <ellipse class="palpebra" cx="148" cy="328" rx="18.5" ry="18.5" fill="#F4F1FB"/>
+              <circle cx="192" cy="328" r="17" fill="#FFD54A"/>
+              <circle cx="192" cy="329" r="9" fill="#301750"/>
+              <circle cx="195" cy="325" r="3.2" fill="#fff"/>
+              <ellipse class="palpebra" cx="192" cy="328" rx="18.5" ry="18.5" fill="#F4F1FB"/>
+            </g>
+            <ellipse cx="132" cy="352" rx="9" ry="5" fill="#F6C9E0" opacity=".8"/>
+            <ellipse cx="208" cy="352" rx="9" ry="5" fill="#F6C9E0" opacity=".8"/>
+            <path d="M161 344q9-6 18 0l-9 16z" fill="#8C7FAE"/>
+            <ellipse class="boca-aberta" cx="170" cy="362" rx="6" ry="4" fill="#5A2E8F"/>
+            <g fill="#F4F1FB"><ellipse cx="148" cy="474" rx="16" ry="8"/><ellipse cx="192" cy="474" rx="16" ry="8"/></g>
+            <g fill="none" stroke="#5A4A80" stroke-width="2.5" stroke-linecap="round"><path d="M138 478v4M148 479v4M158 478v4M182 478v4M192 479v4M202 478v4"/></g>
+          </g>
+
+          <g transform="translate(652 584) scale(1.22) translate(-680 -584)">
+          </g>
+          <!-- muro de pedra dos gatos -->
+          <rect x="560" y="512" width="240" height="70" rx="10" fill="#6E4BC2"/>
+          <rect x="552" y="500" width="256" height="16" rx="8" fill="#8D6EDB"/>
+          <g fill="#5E3DB3"><rect x="574" y="526" width="48" height="20" rx="8"/><rect x="632" y="526" width="60" height="20" rx="8"/><rect x="702" y="526" width="50" height="20" rx="8"/><rect x="600" y="554" width="56" height="20" rx="8"/><rect x="668" y="554" width="48" height="20" rx="8"/><rect x="728" y="554" width="54" height="20" rx="8"/></g>
+
+          <!-- gatinho lilás (repete a palavra) -->
+          <g class="gato-a" id="gato">
+            <path class="rabo" d="M648 490c34 4 52-14 42-40" fill="none" stroke="#A68BE3" stroke-width="13" stroke-linecap="round"/>
+            <ellipse cx="620" cy="470" rx="36" ry="32" fill="#C7B3F2"/>
+            <ellipse cx="620" cy="480" rx="18" ry="20" fill="#E9E1FB"/>
+            <ellipse cx="604" cy="500" rx="10" ry="6" fill="#E9E1FB"/><ellipse cx="636" cy="500" rx="10" ry="6" fill="#E9E1FB"/>
+            <path class="orelha" d="M596 410 597 374 618 396z" fill="#C7B3F2" stroke="#C7B3F2" stroke-width="6" stroke-linejoin="round"/>
+            <path d="M644 410 643 374 622 396z" fill="#C7B3F2" stroke="#C7B3F2" stroke-width="6" stroke-linejoin="round"/>
+            <path d="M601 398 602 384 611 394z" fill="#F2A7CF"/><path d="M639 398 638 384 629 394z" fill="#F2A7CF"/>
+            <circle cx="620" cy="420" r="31" fill="#C7B3F2"/>
+            <g fill="#A68BE3"><rect x="611" y="392" width="5" height="12" rx="2.5"/><rect x="618" y="390" width="5" height="14" rx="2.5"/><rect x="625" y="392" width="5" height="12" rx="2.5"/></g>
+            <ellipse cx="620" cy="432" rx="14" ry="10" fill="#E9E1FB"/>
+            <ellipse cx="608" cy="418" rx="5.5" ry="7" fill="#301750"/><circle cx="610" cy="415" r="2" fill="#fff"/>
+            <ellipse cx="632" cy="418" rx="5.5" ry="7" fill="#301750"/><circle cx="634" cy="415" r="2" fill="#fff"/>
+            <ellipse class="palpebra" cx="608" cy="418" rx="7" ry="8" fill="#C7B3F2"/>
+            <ellipse class="palpebra" cx="632" cy="418" rx="7" ry="8" fill="#C7B3F2"/>
+            <path d="M616 427h8l-4 5z" fill="#E58FBF"/>
+            <path d="M613 434q3.5 4 7 0 3.5 4 7 0" fill="none" stroke="#301750" stroke-width="2" stroke-linecap="round"/>
+            <ellipse class="boca-aberta" cx="620" cy="440" rx="5" ry="4" fill="#5A2E8F"/>
+            <g stroke="#F6F2FD" stroke-width="1.8" stroke-linecap="round"><path d="M598 430h-20M598 435l-18 4M642 430h20M642 435l18 4"/></g>
+          </g>
+
+          <!-- gatinho branco que chega andando -->
+          <g transform="translate(-22 0)"><g class="gato-b">
+            <g class="passo">
+              <path class="rabo" d="M714 492c30 6 44-10 40-34" fill="none" stroke="#E4DAF8" stroke-width="11" stroke-linecap="round"/>
+              <ellipse cx="740" cy="478" rx="30" ry="26" fill="#F6F2FD"/>
+              <ellipse cx="748" cy="470" rx="14" ry="10" fill="#C7B3F2"/>
+              <ellipse cx="728" cy="500" rx="9" ry="5" fill="#fff"/><ellipse cx="754" cy="500" rx="9" ry="5" fill="#fff"/>
+              <path d="M720 434 722 404 739 422z" fill="#F6F2FD" stroke="#F6F2FD" stroke-width="5" stroke-linejoin="round"/>
+              <path class="orelha" d="M760 434 758 404 741 422z" fill="#C7B3F2" stroke="#C7B3F2" stroke-width="5" stroke-linejoin="round"/>
+              <path d="M725 425 726 413 733 421z" fill="#F2A7CF"/><path d="M755 425 754 413 747 421z" fill="#F2A7CF"/>
+              <circle cx="740" cy="442" r="26" fill="#F6F2FD"/>
+              <path d="M745 418a26 26 0 0 1 20 20c-8 2-16-4-20-20z" fill="#C7B3F2"/>
+              <ellipse cx="730" cy="441" rx="4.6" ry="6" fill="#4C13A2"/><circle cx="731.5" cy="438.5" r="1.6" fill="#fff"/>
+              <ellipse cx="750" cy="441" rx="4.6" ry="6" fill="#4C13A2"/><circle cx="751.5" cy="438.5" r="1.6" fill="#fff"/>
+              <ellipse class="palpebra" cx="730" cy="441" rx="6" ry="7" fill="#F6F2FD"/>
+              <ellipse class="palpebra" cx="750" cy="441" rx="6" ry="7" fill="#F6F2FD"/>
+              <path d="M737 449h6l-3 4z" fill="#E58FBF"/>
+              <path d="M734 455q3 3 6 0 3 3 6 0" fill="none" stroke="#4C13A2" stroke-width="1.8" stroke-linecap="round"/>
+              <g stroke="#C7B3F2" stroke-width="1.6" stroke-linecap="round"><path d="M720 450h-16M720 454l-14 3M760 450h16M760 454l14 3"/></g>
+            </g>
+          </g></g>
+          </g>
+        </svg>
+        <p class="balao balao-coruja" id="balao-coruja" aria-live="polite"><span class="s" style="--i:0">Co</span><span class="s" style="--i:1">ru</span><span class="s" style="--i:2">ja</span></p>
+        <p class="balao balao-gato" id="balao-gato" aria-hidden="true"><span class="s" style="--i:0">Co</span><span class="s" style="--i:1">ru</span><span class="s" style="--i:2">ja!</span></p>
+        <button class="toque" type="button" id="toque" aria-label="Tocar na coruja: ela diz uma palavra nova"></button>
+      </figure>
+  </div>
+  <div class="chao">
+    <div class="dentro">
+      <div class="jogo">
+        <p>Repita comigo: toque na coruja, ela fala uma palavra em pedacinhos e o gatinho repete. Agora é a sua vez!</p>
+        <button class="botao-2" type="button" id="outra">Outra palavra</button>
+        <button class="botao-2" type="button" id="voz" data-voz aria-pressed="false">Som desligado</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secao" aria-labelledby="quem-t">
+  <div class="dentro quem">
+    <img class="moldura foto sobe" src="../fotos/raissa.jpg" alt="Raíssa Morato Duarte, fonoaudióloga, sorrindo, de óculos" width="750" height="1000">
+    <div>
+      <h2 id="quem-t" class="sobe">Quem é a Raíssa</h2>
+      <p class="lead sobe" data-ordem="1">Com paciência, um pouco de encanto e muita técnica, cada palavra vira conquista.</p>
+      <dl class="fatos sobe" data-ordem="2">
+        <div><dt>Formação</dt><dd>Fonoaudiologia na PUC-Campinas</dd></div>
+        <div><dt>Registro</dt><dd>CRFa 2-23614</dd></div>
+        <div><dt>Atende</dt><dd>Crianças e adultos</dd></div>
+        <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/fonoraissamd" target="_blank" rel="noopener">@fonoraissamd</a></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="secao atua" aria-labelledby="atua-t">
+  <div class="dentro">
+    <div class="atua-topo">
+      <h2 id="atua-t" class="sobe">Onde a Raíssa atua</h2>
+      <p class="sobe" data-ordem="1">Da primeira palavra à leitura na escola, da voz à alimentação: a fonoaudiologia cuida de tudo o que passa pela boca, pelo ouvido e pela linguagem.</p>
+    </div>
+    <ul class="areas">
+      <li class="sobe"><span class="marcador" aria-hidden="true"></span><span>Linguagem oral</span></li>
+      <li class="sobe" data-ordem="1"><span class="marcador" aria-hidden="true"></span><span>Leitura e escrita</span></li>
+      <li class="sobe" data-ordem="2"><span class="marcador" aria-hidden="true"></span><span>Estimulação precoce</span></li>
+      <li class="sobe" data-ordem="3"><span class="marcador" aria-hidden="true"></span><span>Voz</span></li>
+      <li class="sobe"><span class="marcador" aria-hidden="true"></span><span>Motricidade orofacial</span></li>
+      <li class="sobe" data-ordem="1"><span class="marcador" aria-hidden="true"></span><span>Processamento Auditivo Central<small>Com treinamento auditivo fora de cabine.</small></span></li>
+      <li class="sobe" data-ordem="2"><span class="marcador" aria-hidden="true"></span><span>Alimentação infantil<small>Inclusive seletividade alimentar.</small></span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="secao tdl" aria-labelledby="tdl-t">
+  <div class="dentro">
+    <h2 id="tdl-t" class="sobe">TDL e autismo: onde está a diferença?</h2>
+    <div class="lados">
+      <div class="lado sobe" data-ordem="1">
+        <h3>No TDL</h3>
+        <p>A dificuldade principal está na linguagem. Sem outros sinais, pode ser Transtorno do Desenvolvimento da Linguagem.</p>
+      </div>
+      <div class="lado sobe" data-ordem="2">
+        <h3>No autismo</h3>
+        <p>A linguagem pode estar afetada, mas a condição é mais ampla: envolve também comportamento e interação social.</p>
+      </div>
+    </div>
+    <div class="tdl-fim">
+      <p class="sobe">Por isso o primeiro passo é a avaliação de um profissional qualificado. Entendendo a diferença, é possível oferecer o cuidado certo para cada criança.</p>
+      <ul class="curtos sobe" data-ordem="1" aria-label="Vídeos curtos da clínica sobre TDL">
+        <li><a href="https://www.youtube.com/shorts/BlPkmrqreTs" target="_blank" rel="noopener">TDL vs TEA<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
+        <li><a href="https://www.youtube.com/shorts/_-KICRApp9o" target="_blank" rel="noopener">Você já ouviu falar em TDL?<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
+        <li><a href="https://www.youtube.com/shorts/4DeqxbiI90A" target="_blank" rel="noopener">Será que meu filho pode ter TDL?<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="secao" aria-labelledby="pod-t">
+  <div class="dentro">
+    <div class="pod-topo">
+      <h2 id="pod-t" class="sobe">A Raíssa no Podtud</h2>
+      <p class="sobe" data-ordem="1">O podcast da Clínica Gratitud, no YouTube. Dois episódios com a Raíssa para ouvir com calma.</p>
+    </div>
+    <div class="eps">
+      <a class="ep sobe" href="https://www.youtube.com/watch?v=gaOH_AL_jcY" target="_blank" rel="noopener">
+        <div class="capa"><img src="../capas/ep_gaOH_AL_jcY.jpg" alt="Capa do episódio Novos olhares para a aprendizagem, com a Raíssa" loading="lazy" width="1280" height="720"></div>
+        <h3>Novos olhares para a aprendizagem</h3>
+        <p>Com a psicóloga e psicopedagoga Fernanda Signato. Aprender vai além da escola.</p>
+      </a>
+      <a class="ep sobe" data-ordem="1" href="https://www.youtube.com/watch?v=o8SoRkSbmmk" target="_blank" rel="noopener">
+        <div class="capa"><img src="../capas/ep_o8SoRkSbmmk.jpg" alt="Capa do episódio Quando comer vira desafio, com a Raíssa" loading="lazy" width="1280" height="720"></div>
+        <h3>Quando comer vira desafio</h3>
+        <p>Com a nutricionista Nathalia Rossi. Seletividade alimentar e como fono e nutrição atuam juntas.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="secao agenda" aria-labelledby="agenda-t">
+  <div class="dentro agenda-in">
+    <div>
+      <h2 id="agenda-t" class="sobe">Vamos marcar uma conversa?</h2>
+      <p class="lead sobe" data-ordem="1">A Clínica Gratitud é credenciada na Unimed Campinas e também atende Salusmed e particular.</p>
+      <p class="info sobe" data-ordem="2">Confirme a cobertura do seu plano com a equipe. Av. Lauro de Carvalho, 1001, Centro, Jaguariúna/SP.</p>
+      <div class="acoes sobe" data-ordem="3">
+        <a class="botao" href="https://wa.me/5519996384455?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20com%20a%20Ra%C3%ADssa" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+      </div>
+    </div>
+    <div class="soneca sobe" data-ordem="1">
+      <svg viewBox="30 60 520 320" role="img" aria-labelledby="soneca-t">
+        <title id="soneca-t">Desenho: um gatinho lilás dormindo enrolado numa almofada, ao lado de uma pilha de livros, debaixo da lua.</title>
+        <g fill="#C8E5F1"><g transform="translate(80 60) scale(.8)"><use class="estrela" href="#brilho"/></g><g transform="translate(520 150) scale(.6)"><use class="estrela" href="#brilho"/></g><g transform="translate(250 40) scale(.5)"><use class="estrela" href="#brilho" fill="#fff"/></g></g>
+        <circle cx="470" cy="120" r="40" fill="#DCD0F5"/>
+        <circle cx="461" cy="127" r="38" fill="#F6F2FD"/>
+        <circle cx="448" cy="112" r="6" fill="#E8E0F9"/><circle cx="472" cy="140" r="4.5" fill="#E8E0F9"/>
+        <!-- livros -->
+        <rect x="40" y="330" width="150" height="30" rx="6" fill="#C9B6F0"/>
+        <rect x="48" y="337" width="134" height="5" rx="2.5" fill="#F6F2FD"/>
+        <rect x="54" y="300" width="124" height="30" rx="6" fill="#59CAE8"/>
+        <rect x="62" y="307" width="108" height="5" rx="2.5" fill="#C8E5F1"/>
+        <rect x="66" y="274" width="100" height="26" rx="6" fill="#F6F2FD"/>
+        <rect x="140" y="274" width="8" height="26" fill="#A68BE3"/>
+        <!-- almofada -->
+        <path d="M180 360c-10-40 20-70 130-70s160 30 150 70c-4 14-20 20-140 20s-136-6-140-20z" fill="#301750"/>
+        <path d="M200 352c10-26 50-44 110-44s104 18 114 44z" fill="#3D1D66"/>
+        <circle cx="200" cy="352" r="8" fill="#59CAE8"/><circle cx="440" cy="352" r="8" fill="#59CAE8"/>
+        <!-- gatinho dormindo -->
+        <g class="respira">
+          <ellipse cx="320" cy="300" rx="104" ry="52" fill="#C7B3F2"/>
+          <path d="M226 318c-6 30 40 46 110 44 50-2 92-14 96-36-30 20-150 24-206-8z" fill="#A68BE3"/>
+          <g fill="#A68BE3"><rect x="300" y="252" width="8" height="24" rx="4"/><rect x="322" y="250" width="8" height="26" rx="4"/><rect x="344" y="254" width="8" height="22" rx="4"/></g>
+          <path d="M420 300c26 22 10 56-40 60-50 4-120 0-150-10" fill="none" stroke="#A68BE3" stroke-width="20" stroke-linecap="round"/>
+          <path d="M210 266 214 226 238 252z" fill="#C7B3F2" stroke="#C7B3F2" stroke-width="7" stroke-linejoin="round"/>
+          <path d="M262 258 270 222 286 252z" fill="#C7B3F2" stroke="#C7B3F2" stroke-width="7" stroke-linejoin="round"/>
+          <path d="M216 256 218 238 230 252z" fill="#F2A7CF"/><path d="M267 252 271 234 280 250z" fill="#F2A7CF"/>
+          <circle cx="246" cy="290" r="44" fill="#C7B3F2"/>
+          <ellipse cx="246" cy="306" rx="22" ry="15" fill="#E9E1FB"/>
+          <g fill="none" stroke="#301750" stroke-width="3" stroke-linecap="round"><path d="M222 286q8 6 16 0"/><path d="M254 286q8 6 16 0"/><path d="M240 312q3 3 6 0 3 3 6 0"/></g>
+          <path d="M242 300h8l-4 5z" fill="#E58FBF"/>
+          <ellipse cx="226" cy="300" rx="7" ry="4" fill="#F2A7CF" opacity=".7"/><ellipse cx="268" cy="300" rx="7" ry="4" fill="#F2A7CF" opacity=".7"/>
+          <ellipse cx="290" cy="336" rx="18" ry="10" fill="#E9E1FB"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape" id="contato">
+  <div class="rodape-in">
+    <p class="nome">Gratitud</p>
+    <div class="cols">
+      <div><b>Endereço</b><span>Av. Lauro de Carvalho, 1001, Centro</span><span>Jaguariúna/SP</span></div>
+      <div><b>Horário</b><span>Segunda a sexta, das 8h às 18h30</span></div>
+      <div><b>Fale com a clínica</b><a href="https://wa.me/5519996384455" target="_blank" rel="noopener">WhatsApp (19) 99638-4455</a><a href="https://www.instagram.com/clinica.gratitud/" target="_blank" rel="noopener">Instagram</a><a href="https://www.youtube.com/@clinicagratitud" target="_blank" rel="noopener">YouTube e Podtud</a></div>
+    </div>
+    <small>Clínica Gratitud. Desenhos feitos para esta página; a foto e as capas são da clínica.</small>
+  </div>
+</footer>
+
+<script src="gratitud.js"></script>
+<script>
+(function(){
+  var palavras=[['Co','ru','ja'],['Ga','ti','nho'],['Cas','te','lo'],['Es','tre','la'],['Lu','a'],['Ja','ne','la'],['Li','vro'],['Pi','po','ca'],['Bo','la'],['Sa','po']];
+  var i=0, timer=null, falando=false;
+  var bc=document.getElementById('balao-coruja'), bg=document.getElementById('balao-gato');
+  var coruja=document.getElementById('coruja'), gato=document.getElementById('gato');
+  var voz=document.getElementById('voz'), comVoz=false;
+  var calmo=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!('speechSynthesis' in window)) document.documentElement.classList.add('sem-voz');
+  function monta(el,s,fim){
+    el.textContent='';
+    s.forEach(function(p,k){var sp=document.createElement('span');sp.className='s';sp.style.setProperty('--i',k);sp.textContent=p+(fim&&k===s.length-1?fim:'');el.appendChild(sp);});
+  }
+  function diz(texto,tom){
+    if(!comVoz) return;
+    var u=new SpeechSynthesisUtterance(texto);u.lang='pt-BR';u.rate=.75;u.pitch=tom;speechSynthesis.speak(u);
+  }
+  function nova(){
+    clearTimeout(timer);
+    if(comVoz) speechSynthesis.cancel();
+    i=(i+1)%palavras.length;
+    var s=palavras[i];
+    monta(bc,s,'');
+    bg.style.visibility='hidden';
+    coruja.classList.add('fala');gato.classList.remove('fala');
+    diz(s.join(', '),1.1);
+    var espera=calmo?400:s.length*320+600;
+    timer=setTimeout(function(){
+      coruja.classList.remove('fala');
+      monta(bg,s,'!');bg.style.visibility='visible';
+      gato.classList.add('fala');
+      diz(s.join(''),1.7);
+      timer=setTimeout(function(){gato.classList.remove('fala');},900);
+    },espera);
+  }
+  document.getElementById('toque').addEventListener('click',nova);
+  document.getElementById('outra').addEventListener('click',nova);
+  voz.addEventListener('click',function(){
+    comVoz=!comVoz;voz.setAttribute('aria-pressed',comVoz);voz.textContent=comVoz?'Som ligado':'Som desligado';
+    if(!comVoz) speechSynthesis.cancel();
+  });
+})();
+</script>
+</body>
+</html>
