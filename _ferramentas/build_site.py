@@ -70,6 +70,7 @@ def convert(name, slug):
     s = (SRC / f'{name}.dc.html').read_text(encoding='utf-8')
     title = re.search(r'<title>(.*?)</title>', s).group(1)
     helmet = re.search(r'<helmet>(.*?)</helmet>', s, re.S).group(1)
+    helmet = helmet.replace('<link rel="preconnect" href="https://fonts.googleapis.com">', '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>')
     body = re.search(r'<x-dc>(.*?)</x-dc>', s, re.S).group(1)
     body = re.sub(r'<helmet>.*?</helmet>', '', body, flags=re.S)
     carousel = '{{' in body
