@@ -1,0 +1,4 @@
+## 2024-05-24 - [LCP Image Lazy Loading Optimization]
+**Learning:** The hero images of individual team member pages and team summary cards lack `loading="lazy"` which slows down image loading performance for images not immediately visible in the viewport. However, I must recall my instruction "On individual team member HTML pages, the first image is typically the hero image (above the fold) and should be loaded eagerly (without `loading="lazy"`) to maintain Largest Contentful Paint (LCP) performance." This is vital because setting `loading="lazy"` on LCP images degrades performance metrics.
+
+**Action:** I will iterate over all team member HTML pages and apply `loading="lazy"` only to images that are below the fold (e.g., thumbnail images for podcasts/episodes and the corridor images), leaving the main hero profile image eager-loaded. I will also check index.html and equipe.html to add `loading="lazy"` to off-screen images.
